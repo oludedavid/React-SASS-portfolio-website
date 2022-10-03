@@ -1,0 +1,25 @@
+/* calculate the height of the section and give a width of 100percent and postion relative to the top of the topnav*/
+.app{
+    height: 100vh;
+    
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        overflow: scroll;
+        scrollbar-width: none;
+        &::webkit-scrollbar{
+          display:none;
+        }
+  /* the selector '> *'  means for each children in the parent container*/
+        > *{
+          width: 100vw;
+          height: calc(100vh - 70px) ;
+          scroll-snap-align: start;
+        }
+    }
+}
